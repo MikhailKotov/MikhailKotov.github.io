@@ -14,10 +14,11 @@
 <body>
     <div class="page cv_page">
         <div class="contacts">
-            <div class="contacts_main"> <span class="profile-img"
-                    style="background-image: url(images/profile.jpg)"></span>
+            <div class="contacts_main">
+                <span class="profile-img" style="background-image: url(images/profile.jpg)"></span>
+                <span class="github-img" style="background-image: url(images/mk_git_io.png)"></span>
                 <h1 class="name">Mykhailo Kotov</h1>
-                <p class="subtitle">iOS & OSX developer</p>
+                <p class="subtitle">iOS & macOS developer</p>
                 <p class="subtitle">Bratislava, Slovakia</p>
             </div>
             <ul>
@@ -37,7 +38,7 @@
                 <li>
                     <a href="mailto:mkhlktv@gmail.com">
                         <div class="button cnt">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px">
                                 <path fill="currentColor"
                                     d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
                             </svg>
@@ -60,7 +61,7 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <li class="screenonly">
                     <a href="https://www.linkedin.com/in/mikhail-kotov-2b429b65" target="_blank">
                         <div class="button cnt">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px">
@@ -82,11 +83,12 @@
                             </svg>
                         </div>
                         <div class="cnt">
-                            <p> Github </p>
+                            <p class="screenonly"> Github </p>
+                            <p class="printonly"> https://mikhailkotov.github.io </p>
                         </div>
                     </a>
                 </li>
-                <li>
+                <li class="screenonly">
                     <a href="pdf/m_kotov_cv.pdf" target="_blank">
                         <div class="button cnt">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px">
@@ -104,76 +106,67 @@
         <div class="main">
             <div class="container">
                 <h2>About me</h2>
+
                 <p class="description">need to add</p>
             </div>
             <div class="container experience">
                 <h2>Experience</h2>
                 <ul>
                     <li>
-                        <p class="position">Software engineer for iOS <b>Conversation</b> app</p>
+                        <p class="position">Software engineer for iOS <a
+                                href="portfolio.html#conversations">Conversations</a> app</p>
                         <p class="subtitle"> <span class="company">Infobip</span> <span class="time">August 2020 - May
                                 2023</span></p>
                         <p class="description">
-                            Contributed to all phases of development of the Conversation app, from inception to
-                            production.
+                            Contributed to all development processes of the Conversation app from the very beginning
                         </p>
 
                         <ul>
                             <li>Implemented test-driven development (TDD) with unit tests, UI tests, and integration
                                 tests</li>
-                            <li>
-                                Managed app localization for both right-to-left and left-to-right languages
-                            </li>
-                            <li>
-                                Executed deep UI customization, including flexible navigation, color variations, deep
-                                linking, and branding
-                            </li>
-                            <li>Created an SDK for third-party application integration
-                            </li>
+                            <li>Managed app localization for both right-to-left and left-to-right languages</li>
+                            <li>Executed deep UI customization, including flexible navigation, color variations, deep
+                                linking, and branding</li>
+                            <li>Created an SDK for third-party application integration</li>
                         </ul>
                     </li>
                     <li>
-                        <p class="position">Software developer for <b>boon</b> and <b>boon.Planet</b></p>
-                        <p class="subtitle"> <span class="company">Wirecard SRO</span> <span class="time">June 2019 -
+                        <p class="position">Software developer for <a href="portfolio.html#boon">boon</a> and <a
+                                href="portfolio.html#boon">boon.Planet</a></p>
+                        <p class="subtitle"> <span class="company">Wirecard</span> <span class="time">June 2019 -
                                 August 2020</span></p>
 
-                        <p class="description">
-                            Joined a Munich-based financial services company focused on providing digital solutions for
-                            cashless payments as a software developer.
-                        </p>
+                        <p class="description">Joined Slovakian office of Munich-based FinTech company focused on
+                            providing digital banking solutions and cashless payments as a iOS engineer</p>
                         <ul>
-                            <li>Implemented new features for Boon Family projects</li>
-                            <li>
-                                Updated and supported CI/CD scripts using Jenkins, Fastlane, Ruby, and Bash</li>
-                            <li>
-                                Addressed bug fixes</li>
-                            <li>
-                                Performed code refactoring</li>
-                            <li>
-                                Conducted UI and unit testing</li>
+                            <li>Implemented new features for <a href="portfolio.html#boon">Boon Family projects</a></li>
+                            <li>Updated and supported CI/CD scripts using Jenkins, Fastlane, Ruby, and Bash</li>
+                            <li>Addressed bug fixes</li>
+                            <li>Performed code refactoring</li>
+                            <li>Conducted UI and unit testing</li>
                         </ul>
                     </li>
                     <li>
                         <p class="position">Leading iOS developer</p>
-                        <p class="subtitle"> <span class="company">Invitly SAS</span> <span class="time">April 2018 -
+                        <p class="subtitle"> <span class="company">Invitly</span> <span class="time">April 2018 -
                                 May 2019</span></p>
-                        <p class="description">
-                            Oversaw iOS development for a community platform that connects professionals with the right
-                            contacts, thereby enabling them to reach their goals.
-                        </p>
+                        <p class="description">Was part of iOS development team for a community <a
+                                href="portfolio.html#invitly">platform that connects professionals</a> with the right
+                            contacts, thereby enabling them to reach their goals</p>
                         <ul>
-                            <li>Built and updated an application that facilitates real-world meetings</li>
-                            <li>Refactored source code and fixed bugs</li>
+                            <li>Built from the legacy code base new application that facilitates real-world meetings
+                            </li>
+                            <li>Refactored needed features and fixed bugs from legacy source code</li>
                             <li>Added new features and implemented a fresh user interface design</li>
+                            <li>Increased performance of the final application</li>
                         </ul>
                     </li>
                     <li>
                         <p class="position">Leading iOS developer</p>
-                        <p class="subtitle"> <span class="company">Curogram Inc</span> <span class="time">June 2017 -
+                        <p class="subtitle"> <span class="company">Curogram</span> <span class="time">June 2017 -
                                 April 2018</span></p>
-                        <p class="description">
-                            Operated as the main developer for iOS on a project related to a communication platform.
-                        </p>
+                        <p class="description">Operated as the lead developer for iOS on <a
+                                href="portfolio.html#curogram">communication platform</a></p>
                         <ul>
                             <li>Developed an instant messenger for healthcare providers and patients to share medical
                                 information</li>
@@ -184,31 +177,43 @@
                 </ul>
                 <h2>Earlier Experience</h2>
                 <ul>
-                    <li>
-                        <p class="position">Leading iOS developer</p>
-                        <p class="subtitle"> <span class="company">Donut Logs Inc</span> <span class="time">May 2016 -
-                                May 2017</span></p>
+                    <li><a href="portfolio.html#donut">
+                            <p class="position">Leading iOS developer</p>
+                            <p class="subtitle"> <span class="company">Donut Logs Inc</span> <span class="time">May 2016
+                                    -
+                                    May 2017</span></p>
+                        </a>
+                    </li>
+                    <li><a href="portfolio.html#swanson">
+                            <p class="position">Leading iOS & OSX
+                                developer</p>
+                            <p class="subtitle"> <span class="company">SwansonDigital LLC</span> <span
+                                    class="time">August
+                                    2015 - May 2016</span></p>
+                        </a>
                     </li>
                     <li>
-                        <p class="position">Leading iOS & OSX
-                            developer</p>
-                        <p class="subtitle"> <span class="company">SwansonDigital LLC</span> <span class="time">August
-                                2015 - May 2016</span></p>
+                        <a href="portfolio.html#tipsi">
+                            <p class="position">Leading iOS developer</p>
+                            <p class="subtitle"> <span class="company">Tipsi Inc</span> <span class="time">August 2014 -
+                                    August 2015</span></p>
+                        </a>
                     </li>
                     <li>
-                        <p class="position">Leading iOS developer</p>
-                        <p class="subtitle"> <span class="company">Tipsi Inc</span> <span class="time">August 2014 -
-                                August 2015</span></p>
+                        <a href="portfolio.html#mobsafety">
+                            <p class="position">Leading iOS developer</p>
+                            <p class="subtitle"> <span class="company">Mobsafety Inc</span> <span class="time">Marсh
+                                    2013 -
+                                    August 2014</span></p>
+                        </a>
                     </li>
                     <li>
-                        <p class="position">Leading iOS developer</p>
-                        <p class="subtitle"> <span class="company">Mobsafety Inc</span> <span class="time">Marсh 2013 -
-                                August 2014</span></p>
-                    </li>
-                    <li>
-                        <p class="position">iOS developer</p>
-                        <p class="subtitle"> <span class="company">Adyax & Oyster Labs</span> <span class="time">July
-                                2012 - Marсh 2013</span></p>
+                        <a href="portfolio.html#adyax_olabs">
+                            <p class="position">iOS developer</p>
+                            <p class="subtitle"> <span class="company">Adyax & Oyster Labs</span> <span
+                                    class="time">July
+                                    2012 - Marсh 2013</span></p>
+                        </a>
                     </li>
                     <li>
                         <p class="position">iOS & OSX developer</p>
@@ -246,10 +251,10 @@
                 <ul>
                     <li>
                         <ul>
-                            <li><span class="name">English</span> - intermediate</li>
-                            <li><span class="name">Russian</span> - fluent</li>
-                            <li><span class="name">Ukrainian</span> - fluent</li>
-                            <li><span class="name">Slovak</span> - intermediate</li>
+                            <li><b class="name">English</b> - intermediate</li>
+                            <li><b class="name">Russian</b> - fluent</li>
+                            <li><b class="name">Ukrainian</b> - fluent</li>
+                            <li><b class="name">Slovak</b> - intermediate</li>
                         </ul>
                     </li>
                 </ul>
@@ -257,44 +262,46 @@
             <div class="container tools">
                 <h2>Tools & Technologies</h2>
                 <ul>
-                    <li class="items"><span class="name">Network:</span> REST, Sockets, GraphQL</li>
-                    <li class="items"><span class="name">GUI:</span> Storyboard, Auto Layout, Xib, CoreAnimation,
+                    <li class="items"><b class="name">Network:</b> REST, Sockets, GraphQL</li>
+                    <li class="items"><b class="name">GUI:</b> Storyboard, Auto Layout, Xib, CoreAnimation,
                         SwiftUI
                     </li>
-                    <li class="items"><span class="name">Data:</span> CoreData, Plist-files, SQLite, iCloud, Keychain,
+                    <li class="items"><b class="name">Data:</b> CoreData, Plist-files, SQLite, iCloud, Keychain,
                         Realm
                     </li>
-                    <li class="items"><span class="name">Integrating:</span> Facebook, Twitter, Instagram, Google, <span
+                    <li class="items"><b class="name">Integrating:</b> Facebook, Twitter, Instagram, Google, <span
                             title="Amazon Web Services">AWS</span>,
                         <span title="VKontakte - Russian online social media and social networking service">VK</span>,
                         LinkedIn
                     </li>
-                    <li class="items"><span class="name">Analytics:</span> TestFairy, Flurry, Crashlytics, Appsflyer
+                    <li class="items"><b class="name">Analytics:</b> TestFairy, Flurry, Crashlytics, Appsflyer
                     </li>
-                    <li class="items"><span class="name">Arch. patterns:</span> <span
+                    <li class="items"><b class="name">Arch. patterns:</b> <span
                             title="Model View Controller">MVC</span>, <span title="Model View ViewModel">MVVM</span>,
                         CleanSwift, <span title="View Interactor Presenter Entity and Router">VIPER</span></li>
-                    <li class="items"><span class="name">Methodologies and principles:</span> <span
+                    <li class="items"><b class="name">Methodologies and principles:</b> <span
                             title="Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion">SOLID</span>,
                         <span title="Keep it simple, stupid!">KISS</span>, <span
-                            title="Test-driven development">TDD</span></li>
-                    <li class="items"><span class="name">Software:</span> Xcode, Figma, Terminal, Adobe Photoshop,
+                            title="Test-driven development">TDD</span>
+                    </li>
+                    <li class="items"><b class="name">Software:</b> Xcode, Figma, Terminal, Adobe Photoshop,
                         Inkscape,
                         Sketch</li>
-                    <li class="items"><span class="name">Management:</span> Jira, Redmine, Zendesk, Trello</li>
-                    <li class="items"><span class="name">General:</span> <span
+                    <li class="items"><b class="name">Management:</b> Scrum, Kanban, Jira, Confluence, Redmine,
+                        Zendesk, Trello</li>
+                    <li class="items"><b class="name">General:</b> <span
                             title="Object-Oriented Programming">OOP</span>, <span
                             title="Protocol-Oriented Programming">POP</span>, <span
                             title="Reactive Programming"></span>Rx, UML, Design Patterns;</li>
-                    <li class="items"><span class="name">Languages:</span> Swift (also Objective C, C, C++, Python,
+                    <li class="items"><b class="name">Languages:</b> Swift (also Objective C, C, C++, Python,
                         Javascript,
                         Shell scripts, sql etc)</li>
-                    <li class="items"><span class="name" title="Source Code Management and Package Management">SCM &
-                            PM:</span> Git, Cocoapods, Carthage, <span
+                    <li class="items"><b class="name" title="Source Code Management and Package Management">SCM &
+                            PM:</b> Git, Cocoapods, Carthage, <span
                             title="Swift Package Manager is a tool for managing the distribution of Swift code">SPM</span>,
                         Homebrew</li>
-                    <li class="items"><span class="name"
-                            title="Continuous Integration (CI) and Continuous Delivery (CD)">CI/CD:</span> Jenkins,
+                    <li class="items"><b class="name"
+                            title="Continuous Integration (CI) and Continuous Delivery (CD)">CI/CD:</b> Jenkins,
                         Fastlane</li>
                 </ul>
             </div>
