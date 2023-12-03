@@ -121,6 +121,13 @@ body {
     color: var(--description_color);
 }
 
+.container>ul>li p {
+    font-weight: var(--description_weight);
+    font-size: var(--description_font_size);
+    color: var(--description_color);
+    padding: 0.4rem 0 0.4rem 0rem;
+}
+
 .container .description {
     font-weight: var(--description_weight);
     font-size: var(--description_font_size);
@@ -162,7 +169,9 @@ div.scroll-container {
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
-    padding: 10px;
+    padding: 8px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 div.scroll-container img {
