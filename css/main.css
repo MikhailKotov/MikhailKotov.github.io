@@ -23,6 +23,7 @@
     --description_color: #454555dd;
     --description_weight: 200;
     --description_font_size: 0.85rem;
+    --position_font_size: 1.0rem;
     --contact_btn_size_sm: 40px;
     --contact_btn_size_gr: 60px;
     --contact_btn_padding: 10px;
@@ -138,6 +139,7 @@ body {
     display: block;
     margin-bottom: 0.3rem;
     font-weight: 500;
+    font-size: var(--position_font_size);
     color: var(--list_title_color);
 }
 
