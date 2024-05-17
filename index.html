@@ -9,6 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script>
+        function diff_years(dt2, dt1) {
+            var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+            diff /= (60 * 60 * 24);
+            return Math.floor(Math.abs(diff/365.25));
+        }
+        function experience() {
+            let firstProject = new Date('2010-09-01');
+            let now = new Date();
+            return diff_years(now, firstProject);
+        }
+        document.getElementById("experience_years").innerHTML = 4 + 5; //experience();
+    </script>
 </head>
 
 <body>
@@ -106,12 +119,26 @@
         <div class="main">
             <div class="container">
                 <h2>About me</h2>
-
-                <p class="description">need to add</p>
+                <p class="description">Passionate iOS Developer with more than <span id="experience_years">?</span> years of exprience. I have worked in various industries and big corporations  (FinTech, MedTech, Telecom) and developed small indie apps for small startups. Team oriented, devoted learner and a proud geek</p>
+                <script>
+                    document.getElementById("experience_years").innerHTML = experience();
+                </script>
             </div>
             <div class="container experience">
                 <h2>Experience</h2>
                 <ul>
+                    <li>
+                        <p class="position">Software engineer</p>
+                        <p class="subtitle"> <span class="company">OLX Group</span> <span class="time">December 2023 - April 2024</span></p>
+                        <p class="description">
+                            OLX is a popular e-comerce web and mobile application.
+                        </p>
+                        <ul>
+                            <li>In this project I developed step by step information update for client about his business (Tax ID, contacts, type of business and address) and data validation in government registries.</li>
+                            <li>I created several CocoaPods using SwiftUI, Combine, Rest API as well as clean architecture.</li>
+                            <li>Added unit tests to cover code dealing with API, model, validators, helpers etc</li>
+                        </ul>
+                    </li>
                     <li>
                         <p class="position">Software engineer for iOS <a
                                 href="portfolio.html#conversations">Conversations</a> app</p>
