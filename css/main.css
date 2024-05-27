@@ -39,6 +39,10 @@ body {
     min-width: calc(var(--contact_user_photo_size) + 2 * var(--contact_user_photo_padding));
 }
 
+hr {
+    display: none;
+}
+
 .page {
     max-width: var(--max_page_size);
     width: 100%;
@@ -338,8 +342,4 @@ a {
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-}
-
-hr {
-    display: none;
 }
