@@ -1,0 +1,217 @@
+    /* General styles for printing */
+    .screenonly {
+        display: none;
+    }
+
+    /* Ensure content is well-aligned and readable */
+    .content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Enhance readability of text */
+    h1, h2, h3 {
+        color: #000;
+        page-break-after: avoid;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding-top: 10px;
+        margin: 0;
+    }
+
+    /* p, li {
+        font-size: 10pt;
+        line-height: 1.4;
+    } */
+
+    .contacts {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contacts .subtitle {
+        margin: 0;
+    }
+
+    .contacts_main {
+        width: 70%;
+    }
+
+    .contacts_secondary {
+        width: 30%;
+        margin-left: 20pt;
+    }
+
+    .contacts li, .container li {
+        list-style-type: none;
+    }
+
+    .contacts ul {
+        padding: 0pt;
+    }
+
+    .contacts li {
+        margin: 0pt;
+        padding: 0pt;
+        line-height: 0.7;
+    }
+
+    .contacts li>p {
+        margin: 6pt 0pt;
+    }
+
+    .main {
+        display: inline-flex;
+    }
+
+    .column_left {
+        width: 70%;
+    }
+
+    .column_right {
+        width: 30%;
+        margin-left: 20pt;
+    }
+
+    .container {
+        font-size: 10pt;
+    }
+
+    .container ul {
+        padding-left: 0pt;
+    }
+
+    .container ul>li {
+        font-weight: 400;
+        font-size: 10pt;
+        color: #000;
+    }
+
+    .container>ul>li p {
+        font-weight: 300;
+    }
+    
+    .container .description {
+        font-weight: 400;
+    }
+
+    .experience .top_space {
+        margin-top: 20pt;
+    }
+
+    .experience, .experience ul>li {
+        font-size: 12pt;
+    }
+
+    .experience li>ul>li {
+        margin-left: 20pt;
+        list-style-type: disc;
+    }
+    /* ABOUT ME*/
+    .aboutme .description {
+        margin-left: 0pt;
+        font-size: 12pt;
+    }
+
+    /* EXPERIENCE */
+    .experience .position {
+        display: block;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .experience .subtitle {
+        display: block;
+        height: 10pt;
+        line-height: 1px;
+        font-size: 10pt;
+        margin-bottom: 0px;
+    }
+    
+    .experience .company {
+        font-style: italic;
+        font-weight: 300;
+        float: left;
+        font-family: 'Roboto', sans-serif;
+
+    }
+
+    .experience .time {
+        font-style: italic;
+        font-weight: 300;
+        float: right;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .flex_cont {
+        display: flex;
+    }
+
+    .flex_cont .position{
+        display: flex;
+        line-height: 10px;
+        height: 10pt;
+        padding-right: 4pt ;
+    }
+
+    .flex_cont .subtitle{
+        flex-grow: 100;
+        line-height: 10px;
+        height: 10px;
+    }
+
+    .education .time {
+        font-style: italic;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .education .university {
+        font-weight: 700;
+        color: black;
+    }
+
+    /* Ensure proper spacing and avoid page breaks within sections */
+    .section {
+        page-break-inside: avoid;
+        padding: 10px 0;
+    }
+
+    /* Images should fit within the printed page */
+    img {
+        max-width: 100%;
+        height: auto;
+        page-break-inside: avoid;
+    }
+
+    /* Remove margins and paddings to use the full width of the page */
+    .container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        width: 100%;
+        color: #000;
+        text-decoration: none;
+    }
+
+    hr {
+        border: 1px dashed #000;
+        border-style: none none dashed; 
+        color: #fff; 
+        background-color: #fff;
+    }
