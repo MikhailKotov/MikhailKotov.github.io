@@ -14,6 +14,7 @@
     h1, h2, h3 {
         color: #000;
         page-break-after: avoid;
+        break-after: avoid;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -39,6 +40,11 @@
     .contacts {
         display: flex;
         justify-content: space-between;
+        page-break-before: avoid;
+        page-break-inside: avoid;
+        page-break-after: avoid;        break-before: avoid;
+        break-inside: avoid;
+        break-after: avoid;
     }
 
     .contacts .subtitle {
@@ -74,6 +80,8 @@
 
     .main {
         display: inline-flex;
+        page-break-before: avoid;
+        break-before: avoid;
     }
 
     .column_left {
@@ -109,6 +117,8 @@
 
     .experience .top_space {
         margin-top: 20pt;
+        page-break-after: auto;
+        break-after: auto;
     }
 
     .experience, .experience ul>li {
@@ -118,6 +128,8 @@
     .experience li>ul>li {
         margin-left: 20pt;
         list-style-type: disc;
+        page-break-after: auto;
+        break-after: auto;
     }
     /* ABOUT ME*/
     .aboutme .description {
@@ -201,6 +213,8 @@
         width: 100%;
         padding: 0;
         margin: 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     a {
@@ -214,4 +228,9 @@
         border-style: none none dashed; 
         color: #fff; 
         background-color: #fff;
+    }
+
+    .experience {
+        page-break-before: auto;
+        break-before: auto;
     }
