@@ -47,7 +47,7 @@ hr {
     max-width: var(--max_page_size);
     width: 100%;
     margin: 0 auto;
-    border: linen 0.5px var(--page_border_color);
+    border: 0.5px solid var(--page_border_color);
     padding: 0rem;
     align-content: center;
 
@@ -263,10 +263,6 @@ a {
     box-shadow: inset 0 0 calc(2 * var(--contact_user_photo_padding)) #636161;
 }
 
-.github-img {
-    display: none;
-}
-
 /* For social icons */
 
 /* Style all font awesome icons */
@@ -338,8 +334,4 @@ a {
     .container li {
         margin: 1rem 0 1rem 0;
     }
-}
-
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
 }

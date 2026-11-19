@@ -4,26 +4,13 @@
 <head>
     <title>Mykhailo Kotov</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"> <meta http-equiv="Pragma" content="no-cache"> <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
-    <script>
-        function diff_years(dt2, dt1) {
-            var diff = (dt2.getTime() - dt1.getTime()) / 1000;
-            diff /= (60 * 60 * 24);
-            return Math.floor(Math.abs(diff / 365.25));
-        }
-        function experience() {
-            let firstProject = new Date('2010-09-01');
-            let now = new Date();
-            return diff_years(now, firstProject);
-        }
-        document.getElementById("experience_years").innerHTML = 4 + 5; //experience();
-    </script>
 </head>
 
 <body>
@@ -31,7 +18,6 @@
         <div class="contacts">
             <div class="contacts_main">
                 <span class="profile-img" style="background-image: url(images/profile.jpg)"></span>
-                <span class="github-img" style="background-image: url(images/mk_git_io.png)"></span>
                 <h1 class="name">Mykhailo Kotov</h1>
                 <p class="subtitle">iOS & macOS developer</p>
                 <p class="subtitle">Bratislava, Slovakia</p>
@@ -372,19 +358,6 @@
                             <rect x="28" y="28" width="1" height="1" />
                         </svg>
                     </li>
-                    <li hidden>
-                        <a href="https://twitter.com">
-                            <div class="button cnt">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path fill="currentColor"
-                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                                </svg>
-                            </div>
-                            <div class="cnt">
-                                <p>X (Twitter)</p>
-                            </div>
-                        </a>
-                    </li>
                     <li>
                         <a class="screenonly" href="mailto:mkhlktv@gmail.com">
                             <div class="button cnt">
@@ -414,7 +387,7 @@
                         <p class="printonly"> Phone: +421 903 883 803 </p>
                     </li>
                     <li class="screenonly">
-                        <a href="https://www.linkedin.com/in/mikhail-kotov/" target="_blank">
+                        <a href="https://www.linkedin.com/in/mikhail-kotov/" target="_blank" rel="noopener">
                             <div class="button cnt">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px">
                                     <path fill="currentColor"
@@ -428,7 +401,7 @@
                         </a>
                     </li>
                     <li class="screenonly">
-                        <a href="https://github.com/mikhailkotov" target="_blank">
+                        <a href="https://github.com/mikhailkotov" target="_blank" rel="noopener">
                             <div class="button cnt">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px">
                                     <path fill="currentColor"
@@ -441,7 +414,7 @@
                         </a>
                     </li>
                     <li class="screenonly">
-                        <a href="pdf/m_kotov_cv.pdf" target="_blank">
+                        <a href="pdf/m_kotov_cv.pdf" target="_blank" rel="noopener">
                             <div class="button cnt">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px">
                                     <path fill="currentColor"
@@ -465,7 +438,12 @@
                         developing both large-scale and indie applications. A dedicated team player, avid learner, and
                         technology enthusiast</p>
                     <script>
-                        document.getElementById("experience_years").innerHTML = experience();
+                        (function () {
+                            var firstProject = new Date('2010-09-01');
+                            var now = new Date();
+                            var years = Math.floor((now.getTime() - firstProject.getTime()) / (1000 * 60 * 60 * 24 * 365.25));
+                            document.getElementById("experience_years").innerHTML = years;
+                        })();
                     </script>
                 </div>
                 <div class="container experience">
