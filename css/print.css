@@ -1,231 +1,226 @@
-    /* General styles for printing */
-    .screenonly,
-    .site-nav {
-        display: none;
-    }
+/* General styles for printing
+   The resume is laid out as two columns (left content / right side) inside .page.
+   .screenonly stays hidden, .printonly is shown. Nav, photos, and portfolio
+   screenshots are excluded from hardcopy; a QR code with the page address is
+   printed in the sidebar instead of the portrait photo.
+*/
 
-    /* Ensure content is well-aligned and readable */
-    .content {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
+/* Hide interactive / decorative elements on paper */
+.screenonly,
+.site-nav,
+.profile-img,
+div.scroll-container {
+    display: none;
+}
 
-    /* Enhance readability of text */
-    h1, h2, h3 {
-        color: #000;
-        page-break-after: avoid;
-        break-after: avoid;
-    }
+/* Sidebar QR replaces the photo on paper; show it */
+.contact-qr {
+    float: right;
+    width: 110px;
+    height: 110px;
+}
 
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
-    }
+.contact-qr-li {
+    float: right;
+    padding-left: 10pt;
+}
 
-    h2 {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1.1rem;
-        padding-top: 10px;
-        margin: 0;
-    }
+body {
+    background: #fff;
+    min-width: 0;
+    display: block;
+}
 
-    /* p, li {
-        font-size: 10pt;
-        line-height: 1.4;
-    } */
+.page {
+    box-shadow: none;
+    border: none;
+}
 
-    .contacts {
-        display: flex;
-        justify-content: space-between;
-        page-break-before: avoid;
-        page-break-inside: avoid;
-        page-break-after: avoid;        break-before: avoid;
-        break-inside: avoid;
-        break-after: avoid;
-    }
+.cv_page {
+    display: block;
+}
 
-    .contacts .subtitle {
-        margin: 0;
-    }
+/* Two-column printed layout */
+.main {
+    display: block;
+}
 
-    .contacts_main {
-        width: 70%;
-    }
+.column_left {
+    float: left;
+    width: 68%;
+}
 
-    .contacts_secondary {
-        width: 30%;
-        margin-left: 20pt;
-    }
+.column_right {
+    float: right;
+    width: 29%;
+}
 
-    .contacts li, .container li {
-        list-style-type: none;
-    }
+/* Sections may span pages; only individual entries are kept together (see below) */
+.container {
+    font-size: 10pt;
+    line-height: 1.3;
+    padding: 0 0 6pt 0;
+    margin: 0 0 10pt 0;
+}
 
-    .contacts ul {
-        padding: 0pt;
-    }
+.contacts {
+    display: block;
+    margin: 0 0 10pt 0;
+    page-break-after: avoid;
+}
 
-    .contacts li {
-        margin: 0pt;
-        padding: 0pt;
-        line-height: 0.7;
-    }
+.contacts .name {
+    margin: 0;
+    text-align: left;
+}
 
-    .contacts li>p {
-        margin: 6pt 0pt;
-    }
+.contacts .subtitle,
+.contacts .contact-line,
+.contacts li > p {
+    margin: 1pt 0;
+    text-align: left;
+    font-size: 9pt;
+    color: #000;
+}
 
-    .main {
-        display: inline-flex;
-        page-break-before: avoid;
-        break-before: avoid;
-    }
+.contacts .screenonly {
+    display: none;
+}
 
-    .column_left {
-        width: 70%;
-    }
+.contacts ul {
+    padding: 0;
+    margin: 0;
+}
 
-    .column_right {
-        width: 30%;
-        margin-left: 20pt;
-    }
+.contacts li {
+    margin: 2pt 0;
+    line-height: 1.4;
+    list-style-type: none;
+}
 
-    .container {
-        font-size: 10pt;
-    }
+/* Prevent the right column from running under the QR */
+.contacts_secondary {
+    margin-right: 0;
+}
 
-    .container ul {
-        padding-left: 0pt;
-    }
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 4pt;
+    font-weight: 700;
+}
 
-    .container ul>li {
-        font-weight: 400;
-        font-size: 10pt;
-        color: #000;
-    }
+h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-top: 8pt;
+    padding-bottom: 2pt;
+    margin: 0;
+    color: #000;
+}
 
-    .container>ul>li p {
-        font-weight: 300;
-    }
-    
-    .container .description {
-        font-weight: 400;
-    }
+h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #000;
+}
 
-    .experience .top_space {
-        margin-top: 20pt;
-        page-break-after: auto;
-        break-after: auto;
-    }
+.container > ul,
+.tools ul,
+.languages ul,
+.education ul {
+    padding: 0;
+    margin: 0;
+}
 
-    .experience, .experience ul>li {
-        font-size: 12pt;
-    }
+.container li,
+.container > ul > li {
+    list-style-type: none;
+    margin: 0 0 6pt 0;
+    font-size: 9pt;
+}
 
-    .experience li>ul>li {
-        margin-left: 20pt;
-        list-style-type: disc;
-        page-break-after: auto;
-        break-after: auto;
-    }
-    /* ABOUT ME*/
-    .aboutme .description {
-        margin-left: 0pt;
-        font-size: 12pt;
-    }
+.container li > ul > li {
+    list-style-type: disc;
+    margin-left: 12pt;
+}
 
-    /* EXPERIENCE */
-    .experience .position {
-        display: block;
-        font-weight: 600;
-    }
-    
-    .experience .subtitle {
-        display: block;
-        height: 10pt;
-        line-height: 1px;
-        font-size: 10pt;
-        margin-bottom: 0px;
-    }
-    
-    .experience .company {
-        font-style: italic;
-        font-weight: 400;
-        float: left;
-    }
+.container li > ul {
+    padding-left: 12pt;
+}
 
-    .experience .time {
-        font-style: italic;
-        font-weight: 400;
-        float: right;
-    }
+/* Experience entries */
+.experience .position {
+    display: block;
+    font-weight: 600;
+    font-size: 10pt;
+    margin-bottom: 1pt;
+}
 
-    .flex_cont {
-        display: flex;
-    }
+.experience .subtitle {
+    display: block;
+    font-size: 9pt;
+    font-style: italic;
+    margin-bottom: 3pt;
+    color: #000;
+}
 
-    .flex_cont .position{
-        display: flex;
-        line-height: 10px;
-        height: 10pt;
-        padding-right: 4pt ;
-    }
+.experience .company {
+    font-weight: 400;
+}
 
-    .flex_cont .subtitle{
-        flex-grow: 100;
-        line-height: 10px;
-        height: 10px;
-    }
+.experience .time {
+    font-weight: 400;
+}
 
-    .education .time {
-        font-style: italic;
-        font-weight: 400;
-    }
+.experience li {
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+}
 
-    .education .university {
-        font-weight: 700;
-        color: black;
-    }
+.experience li:last-child {
+    margin-bottom: 0;
+}
 
-    /* Ensure proper spacing and avoid page breaks within sections */
-    .section {
-        page-break-inside: avoid;
-        padding: 10px 0;
-    }
+/* Earlier experience rows stay inline (flex) */
+.flex_cont .position,
+.flex_cont .subtitle {
+    display: inline;
+    font-size: 9pt;
+}
 
-    /* Images should fit within the printed page */
-    img {
-        max-width: 100%;
-        height: auto;
-        page-break-inside: avoid;
-    }
+.flex_cont .company {
+    margin-right: 4pt;
+}
 
-    /* Remove margins and paddings to use the full width of the page */
-    .container {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        page-break-inside: avoid;
-        break-inside: avoid;
-    }
+/* Links become plain black text on paper */
+a {
+    color: #000;
+    text-decoration: none;
+}
 
-    a {
-        width: 100%;
-        color: #000;
-        text-decoration: none;
-    }
+hr {
+    display: none;
+}
 
-    hr {
-        border: 1px dashed #000;
-        border-style: none none dashed; 
-        color: #fff; 
-        background-color: #fff;
-    }
+/* Tools/languages labels */
+.tools .name,
+.languages .name,
+.education .university {
+    font-weight: 700;
+    color: #000;
+}
 
-    .experience {
-        page-break-before: auto;
-        break-before: auto;
-    }
+.tools .items,
+.container .description,
+.languages li,
+.education .description {
+    font-size: 9pt;
+    font-weight: 400;
+    color: #000;
+}
+
+/* Keep each educational block together */
+.education li {
+    page-break-inside: avoid;
+}
