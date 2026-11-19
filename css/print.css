@@ -1,5 +1,6 @@
     /* General styles for printing */
-    .screenonly {
+    .screenonly,
+    .site-nav {
         display: none;
     }
 
@@ -15,18 +16,17 @@
         color: #000;
         page-break-after: avoid;
         break-after: avoid;
-        font-family: 'Roboto', sans-serif;
     }
 
     h1 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
-        font-weight: 500;
+        font-weight: 700;
     }
 
     h2 {
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 1.1rem;
         padding-top: 10px;
         margin: 0;
@@ -140,8 +140,7 @@
     /* EXPERIENCE */
     .experience .position {
         display: block;
-        font-weight: 500;
-        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
     }
     
     .experience .subtitle {
@@ -154,17 +153,14 @@
     
     .experience .company {
         font-style: italic;
-        font-weight: 300;
+        font-weight: 400;
         float: left;
-        font-family: 'Roboto', sans-serif;
-
     }
 
     .experience .time {
         font-style: italic;
-        font-weight: 300;
+        font-weight: 400;
         float: right;
-        font-family: 'Roboto', sans-serif;
     }
 
     .flex_cont {
@@ -186,8 +182,7 @@
 
     .education .time {
         font-style: italic;
-        font-weight: 300;
-        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
     }
 
     .education .university {

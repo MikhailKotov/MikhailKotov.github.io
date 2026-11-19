@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     /* border: dashed 0.5px #ddd; */
 }
 
@@ -14,14 +14,14 @@
     --primary_bg: #fff;
     --page_border_color: #454555;
     --main_bg: #f4f4f4;
-    --header_color: #D6AB53;
+    --header_color: #9d7c14;
     --contact_bg: #e3bf7433;
     --contact_btn_bg: #d6ab53;
     --contact_name_font_color: #454555;
     --contact_subtitle_font_color: #45455599;
     --list_title_color: #303040;
     --description_color: #454555dd;
-    --description_weight: 200;
+    --description_weight: 400;
     --description_font_size: 0.85rem;
     --position_font_size: 1.0rem;
     --contact_btn_size_sm: 40px;
@@ -37,6 +37,33 @@ body {
     background: var(--main_bg);
     width: 100%;
     min-width: calc(var(--contact_user_photo_size) + 2 * var(--contact_user_photo_padding));
+}
+
+/* Simple cross-page navigation: Resume ⇄ Portfolio */
+.site-nav {
+    max-width: var(--max_page_size);
+    margin: 0 auto;
+    padding: 1rem 1.2rem 0;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.site-nav__link {
+    color: var(--contact_subtitle_font_color);
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 0.15rem;
+    border-bottom: 2px solid transparent;
+}
+
+.site-nav__link:hover {
+    color: var(--list_title_color);
+}
+
+.site-nav__link[aria-current="page"] {
+    color: var(--list_title_color);
+    border-bottom-color: var(--contact_btn_bg);
 }
 
 hr {
@@ -169,17 +196,25 @@ hr {
     float: right;
 }
 
+/* Portfolio screenshots: responsive grid instead of horizontal scrolling */
 div.scroll-container {
-    background-color: #333;
-    overflow: auto;
-    white-space: nowrap;
-    padding: 8px;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    background-color: #f0f0f0;
+    border: 0.5px solid var(--page_border_color);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+    padding: 0.75rem;
+    margin: 1rem 0 2rem;
 }
 
 div.scroll-container img {
-    padding: 10px;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 4px;
 }
 
 .education .university {
@@ -203,7 +238,6 @@ div.scroll-container img {
 }
 
 .tools .items {
-    font-weight: 300;
     font-weight: var(--description_weight);
     font-size: var(--description_font_size);
     color: var(--description_color);
@@ -214,25 +248,15 @@ header {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Roboto', sans-serif;
-    /* line-height: 1.2; */
-}
-
 h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 h2 {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 1.6rem;
     padding-bottom: 10px;
     margin: 0;
@@ -240,8 +264,9 @@ h2 {
 }
 
 h3 {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 1.3rem;
+    color: var(--list_title_color);
 }
 
 a {
@@ -274,7 +299,7 @@ a {
 .cnt p {
     margin: 0px 0px 0px 10px;
     line-height: var(--contact_btn_size_sm);
-    font-weight: 200;
+    font-weight: 400;
     color: var(--contact_subtitle_font_color);
 }
 
@@ -333,5 +358,48 @@ a {
 
     .container li {
         margin: 1rem 0 1rem 0;
+    }
+}
+
+/* Mobile phones (below 700px) */
+@media only screen and (max-width: 699px) {
+    body {
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    /* Let long contact labels wrap instead of overflowing */
+    .contacts li {
+        margin: 0.6rem 0.8rem;
+    }
+
+    .contacts a {
+        height: auto;
+        min-height: var(--contact_btn_size_sm);
+        display: flex;
+        align-items: center;
+    }
+
+    .cnt {
+        float: none;
+        height: auto;
+    }
+
+    /* Align the circular icon with its label vertically */
+    .contacts a .button {
+        flex-shrink: 0;
+    }
+
+    .cnt p {
+        white-space: normal;
+        line-height: 1.35;
+        margin-left: 10px;
+    }
+
+    /* Give the portrait a bit more breathing room on small screens */
+    .profile-img {
+        width: calc(var(--contact_user_photo_size) * 0.8);
+        height: calc(var(--contact_user_photo_size) * 0.8);
+        border-radius: 50%;
     }
 }
